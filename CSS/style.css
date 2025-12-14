@@ -307,7 +307,7 @@ h1, h2, h3 {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
-.education-row.education-row--reverse {
+.education-row.education-row-reverse {
     flex-direction: row-reverse;
 }
 
@@ -715,10 +715,13 @@ main::after {
 
     .hero-slider {
         gap: 20px;
+        width: 100%;
+        justify-content: center;
     }
 
-    .hero-image {
-        max-width: calc(100vw - 80px);
+    .hero-frame {
+        min-width: 0;
+        max-width: calc(100vw - 140px);
     }
 
     .hero-text h1 {
@@ -730,9 +733,8 @@ main::after {
     }
 
     .hero-arrow {
-        width: 48px;
-        height: 48px;
-        font-size: 2rem;
+        flex-shrink: 0;
+
     }
 
     .event-grid {
@@ -745,7 +747,7 @@ main::after {
         height: 220px;
     }
 
-    .education-row, .education-row.education-row--reverse {
+    .education-row, .education-row.education-row-reverse {
         flex-direction: column;
         text-align: center;
         margin: 40px;
@@ -753,7 +755,6 @@ main::after {
 
     .education-content {
         max-width: 90vw;
-        
     }
 
     .site-footer {
@@ -786,6 +787,20 @@ main::after {
         gap: 80px;
     }
 
+    .exhibition-page-reverse .exhibition-row, .exhibition-page-reverse .exhibition-row.exhibition-row-reverse {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .exhibition-content {
+        text-align: left;
+    }
+
+    .exhibition-img {
+        width: 280px;
+        height: 280px;
+    }
+
     .about-page {
         padding: 40px 30px 60px;
         gap: 40px;
@@ -816,3 +831,181 @@ main::after {
         gap: 40px;
     }
 }
+
+@media (max-width: 500px) {
+
+    .site-header {
+      padding: 14px 16px;
+    }
+  
+    .logo-img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .main-nav a {
+      font-size: 2.6rem;
+      padding: 12px 26px;
+    }
+  
+    .hero {
+      padding: 24px 0 48px;
+    }
+  
+    .hero-frame {
+      height: 260px;
+      max-width: calc(100vw - 110px); 
+      border-radius: 16px;
+    }
+  
+    .hero-text h1 {
+      font-size: 3rem;
+    }
+  
+    .hero-text p {
+      font-size: 1.6rem;
+    }
+  
+    .hero-arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 1.8rem;
+    }
+
+    .cta {
+      font-size: 2.6rem;
+      padding: 12px 28px;
+    }
+  
+    .cta-small {
+      font-size: 1.8rem;
+      padding: 10px 22px;
+    }
+  
+    .event-heading {
+      font-size: 2.8rem;
+      margin-bottom: 32px;
+    }
+  
+    .event-img {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .education {
+      padding: 48px 0;
+      gap: 40px;
+    }
+  
+    .education-row,
+    .education-row.education-row--reverse {
+      flex-direction: column;
+      gap: 20px;
+      padding: 18px;
+    }
+  
+    .education-img img {
+      width: min(320px, 90vw);
+      border-radius: 16px;
+    }
+  
+    .education-content h2 {
+      font-size: 2.8rem;
+    }
+  
+    .education-content p {
+      font-size: 1.8rem;
+    }
+  
+    .exhibitions-container {
+      padding: 0 16px;
+    }
+  
+    .exhibition-row,
+    .exhibition-row.exhibition-row-reverse {
+      flex-direction: column;
+      gap: 18px;
+      padding: 18px;
+      text-align: center;
+    }
+  
+    .exhibition-img img {
+      width: 240px;
+      height: 240px;
+    }
+  
+    .exhibition-content h2 {
+      font-size: 2.8rem;
+      text-align: center;
+    }
+  
+    .exhibition-content p {
+      font-size: 1.8rem;
+      text-align: left; 
+    }
+
+    .exhibition-page-reverse .exhibition-row, .exhibition-page-reverse .exhibition-row.exhibition-row-reverse {
+        flex-direction: column !important;
+    }
+
+    .exhibition-img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .exhibition-content {
+        text-align: left;
+    }
+  
+    .about-page {
+      padding: 32px 16px 60px;
+      gap: 36px;
+    }
+  
+    .about-hero {
+      flex-direction: column;
+      gap: 18px;
+    }
+  
+    .about-hero-card {
+      padding: 18px 16px;
+    }
+  
+    .about-hero-card p {
+      font-size: 1.8rem;
+      text-align: left;
+    }
+  
+    .about-info-grid {
+      grid-template-columns: 1fr; 
+      gap: 22px;
+    }
+  
+    .info-card {
+      padding: 18px 16px;
+    }
+  
+    
+    .site-footer {
+      padding: 32px 16px 16px;
+    }
+  
+    .footer-top {
+      gap: 40px;
+    }
+  
+    .footer-nav {
+      gap: 18px;
+    }
+  
+    .footer-logo img {
+      width: 140px;
+      height: 140px;
+      margin-top: 0;
+    }
+  
+    .footer-copy {
+      margin-top: 28px;
+      font-size: 1.3rem;
+    }
+}  
