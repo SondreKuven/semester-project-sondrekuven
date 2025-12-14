@@ -671,7 +671,7 @@ main::after {
     text-align: center;
 }
 
-@media (max-width:900px) {
+@media (max-width:1200px) {
 
     .site-header {
         display: flex;
@@ -734,12 +734,22 @@ main::after {
 
     .hero-arrow {
         flex-shrink: 0;
-
     }
 
-    .event-grid {
-        gap: 40px;
-        flex-direction: column;
+    .events .event-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .events .event-card {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .events .event-nav {
+        width: 100%;
     }
 
     .event-img {
