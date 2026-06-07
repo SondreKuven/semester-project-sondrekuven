@@ -502,7 +502,7 @@ main::after {
 }
 
 
-/*Reversing the exibitionpage for the events page*/
+/*Reversing the exhibitionpage for the events page*/
 
 .exhibition-page-reverse .exhibition-row {
     flex-direction: row-reverse;
@@ -669,6 +669,11 @@ main::after {
     border: 1px solid var(--text-dark-background);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
     text-align: center;
+}
+
+a:focus-visible, button:focus-visible {
+    outline: 4px solid var(--accent-color-cta);
+    outline-offset: 4px;
 }
 
 @media (max-width:1200px) {
